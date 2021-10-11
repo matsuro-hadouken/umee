@@ -1,5 +1,7 @@
 ### UMEE GRAFANA DASHBOARD
 
+* Grafana version: 8.1.2 !
+
 _This is very fast coded version made in rush, please report errors, contribution is highly appreciated_
 
 * Enable prometheus metrics in $HOME/.umee/config/config.toml
