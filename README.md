@@ -17,7 +17,7 @@ prometheus_listen_addr = ":26660"
 * Allow metrics port in firewal, use tunnels, subnets or prefered method.
 * Check if metrics visible from Prometheus instance:
 ```bash
-curl -s <your instance IP>:26660/metrics
+curl -s <UMEE node IP here>:26660/metrics
 ```
 * Point Prometheus to metrics end-point and restart, follow example, use your instance IP in case Prometheus is separated:
 ```bash
