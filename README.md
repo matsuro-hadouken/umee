@@ -28,3 +28,7 @@ curl -s <your instance IP>:26660/metrics
 * Import attached grafana dashboard json
 * setup alerts, each alert have short description
 * ask for help in Discord ( _is a mess currently going on, will do my best and help everyone as possible_ )
+
+![1](https://user-images.githubusercontent.com/50751381/136826346-e2a3ca59-28e4-4cd9-9abf-d0ae7c5a844a.png)
+![2](https://user-images.githubusercontent.com/50751381/136826354-9d12ff12-9a6e-4846-866f-a55ce07f6174.png)
+![3](https://user-images.githubusercontent.com/50751381/136826558-81aac3da-cbce-484a-8b15-8736bfa81a77.png)
