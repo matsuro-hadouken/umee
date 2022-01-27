@@ -1,3 +1,31 @@
+### AUTOSTAKE SERVICE
+
+Example: _autostake.service_
+
+```bash
+[Unit]
+Description=AUTOSTAKE SERVICE
+After=network-online.target
+
+[Service]
+
+Type=simple
+
+User=umee
+Group=umee
+
+ExecStart=/path/to/autostake.sh
+
+Restart=on-failure
+RestartSec=60
+
+KillMode=process
+
+[Install]
+
+WantedBy=multi-user.target
+```
+
 ### UMEE GRAFANA DASHBOARD
 
 * Grafana version: 8.1.2 !
