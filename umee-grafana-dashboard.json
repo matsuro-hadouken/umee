@@ -23,7 +23,7 @@
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
   "id": 105,
-  "iteration": 1646038235210,
+  "iteration": 1647670943820,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -143,7 +143,7 @@
       },
       "gridPos": {
         "h": 4,
-        "w": 8,
+        "w": 4,
         "x": 2,
         "y": 1
       },
@@ -190,6 +190,78 @@
         }
       ],
       "title": "Infrastructure Height",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "$DS"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#7d7d7e",
+            "mode": "fixed"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-blue",
+                "value": null
+              }
+            ]
+          },
+          "unit": "s"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 6,
+        "y": 1
+      },
+      "hideTimeOverride": true,
+      "id": 113,
+      "links": [],
+      "maxDataPoints": 100,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "last"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "text": {},
+        "textMode": "auto"
+      },
+      "pluginVersion": "8.3.3",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "W7zgjlS7z"
+          },
+          "exemplar": true,
+          "expr": "avg_over_time(tendermint_consensus_block_interval_seconds_sum{chain_id=\"$chain_id\", instance=\"$instance\"}[$__interval]) / avg_over_time(tendermint_consensus_block_interval_seconds_count{chain_id=\"$chain_id\", instance=\"$instance\"}[$__interval])",
+          "format": "time_series",
+          "hide": false,
+          "interval": "30s",
+          "intervalFactor": 1,
+          "legendFormat": " ",
+          "refId": "A"
+        }
+      ],
+      "timeFrom": "1h",
+      "title": "Avg Block Time",
       "type": "stat"
     },
     {
@@ -514,7 +586,7 @@
           "refId": "A"
         }
       ],
-      "title": "Active Validators",
+      "title": "Validators",
       "type": "stat"
     },
     {
@@ -525,14 +597,14 @@
       "fieldConfig": {
         "defaults": {
           "color": {
-            "mode": "palette-classic"
+            "mode": "thresholds"
           },
           "custom": {
             "axisLabel": "",
             "axisPlacement": "auto",
             "barAlignment": 0,
             "drawStyle": "line",
-            "fillOpacity": 20,
+            "fillOpacity": 23,
             "gradientMode": "opacity",
             "hideFrom": {
               "legend": false,
@@ -555,51 +627,24 @@
               "mode": "off"
             }
           },
-          "decimals": 0,
           "links": [],
           "mappings": [],
-          "min": 0,
           "thresholds": {
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
+                "color": "dark-red",
                 "value": null
               },
               {
-                "color": "red",
-                "value": 80
+                "color": "dark-green",
+                "value": 200000000
               }
             ]
           },
           "unit": "short"
         },
-        "overrides": [
-          {
-            "__systemRef": "hideSeriesFrom",
-            "matcher": {
-              "id": "byNames",
-              "options": {
-                "mode": "exclude",
-                "names": [
-                  "Online"
-                ],
-                "prefix": "All except:",
-                "readOnly": true
-              }
-            },
-            "properties": [
-              {
-                "id": "custom.hideFrom",
-                "value": {
-                  "legend": false,
-                  "tooltip": false,
-                  "viz": true
-                }
-              }
-            ]
-          }
-        ]
+        "overrides": []
       },
       "gridPos": {
         "h": 8,
@@ -656,7 +701,7 @@
           },
           "custom": {
             "axisLabel": "",
-            "axisPlacement": "right",
+            "axisPlacement": "left",
             "barAlignment": 0,
             "drawStyle": "line",
             "fillOpacity": 22,
@@ -693,7 +738,7 @@
               }
             ]
           },
-          "unit": "short"
+          "unit": "none"
         },
         "overrides": []
       },
@@ -775,7 +820,6 @@
               "mode": "off"
             }
           },
-          "decimals": 0,
           "links": [],
           "mappings": [],
           "min": 0,
@@ -792,7 +836,7 @@
               }
             ]
           },
-          "unit": "locale"
+          "unit": "none"
         },
         "overrides": [
           {
@@ -813,21 +857,6 @@
           {
             "matcher": {
               "id": "byName",
-              "options": "Height for last 3 hours"
-            },
-            "properties": [
-              {
-                "id": "color",
-                "value": {
-                  "fixedColor": "#447ebc",
-                  "mode": "fixed"
-                }
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
               "options": "Missing"
             },
             "properties": [
@@ -835,21 +864,6 @@
                 "id": "color",
                 "value": {
                   "fixedColor": "dark-purple",
-                  "mode": "fixed"
-                }
-              }
-            ]
-          },
-          {
-            "matcher": {
-              "id": "byName",
-              "options": "Total Transactions for last 3 hours"
-            },
-            "properties": [
-              {
-                "id": "color",
-                "value": {
-                  "fixedColor": "#ef843c",
                   "mode": "fixed"
                 }
               }
@@ -1065,7 +1079,7 @@
         "type": "prometheus",
         "uid": "${DS}"
       },
-      "description": "",
+      "description": "Data source is from node_exporter\nhttps://github.com/prometheus/node_exporter",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -1208,7 +1222,7 @@
         "type": "prometheus",
         "uid": "${DS}"
       },
-      "description": "",
+      "description": "Data source is from node_exporter\nhttps://github.com/prometheus/node_exporter",
       "fieldConfig": {
         "defaults": {
           "links": []
@@ -1341,7 +1355,7 @@
         "type": "prometheus",
         "uid": "${DS}"
       },
-      "description": "CPU Load Average 5m 15m 1h",
+      "description": "CPU Load Average 5m 15m 1h\n\nData source is from node_exporter\nhttps://github.com/prometheus/node_exporter",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -1535,7 +1549,7 @@
         "type": "prometheus",
         "uid": "${DS}"
       },
-      "description": "",
+      "description": "Data source is from node_exporter\nhttps://github.com/prometheus/node_exporter",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -2886,7 +2900,7 @@
       },
       "gridPos": {
         "h": 5,
-        "w": 6,
+        "w": 5,
         "x": 0,
         "y": 50
       },
@@ -3001,8 +3015,8 @@
       },
       "gridPos": {
         "h": 5,
-        "w": 6,
-        "x": 6,
+        "w": 5,
+        "x": 5,
         "y": 50
       },
       "hideTimeOverride": false,
@@ -3118,8 +3132,8 @@
       },
       "gridPos": {
         "h": 5,
-        "w": 6,
-        "x": 12,
+        "w": 5,
+        "x": 10,
         "y": 50
       },
       "id": 72,
@@ -3595,8 +3609,8 @@
       },
       "gridPos": {
         "h": 5,
-        "w": 6,
-        "x": 18,
+        "w": 5,
+        "x": 15,
         "y": 50
       },
       "id": 102,
@@ -3652,6 +3666,126 @@
         }
       ],
       "title": "[ Alert ] Traffic network ( Example )",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "$DS"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 50,
+            "gradientMode": "opacity",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "stepAfter",
+            "lineStyle": {
+              "fill": "solid"
+            },
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "never",
+            "spanNulls": true,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "links": [],
+          "mappings": [],
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 0.1
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "umee-1"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "dark-green",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 4,
+        "x": 20,
+        "y": 50
+      },
+      "hideTimeOverride": false,
+      "id": 115,
+      "links": [],
+      "options": {
+        "legend": {
+          "calcs": [
+            "max",
+            "min",
+            "last"
+          ],
+          "displayMode": "table",
+          "placement": "bottom"
+        },
+        "tooltip": {
+          "mode": "single"
+        }
+      },
+      "pluginVersion": "8.1.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "W7zgjlS7z"
+          },
+          "exemplar": true,
+          "expr": "tendermint_consensus_byzantine_validators{chain_id=\"$chain_id\", instance=\"$instance\"}",
+          "format": "time_series",
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "{{ chain_id }}",
+          "refId": "C"
+        }
+      ],
+      "title": "[ Alert ] Byzantine Activity ( Example )",
       "type": "timeseries"
     }
   ],
@@ -3742,7 +3876,7 @@
     ]
   },
   "time": {
-    "from": "now-2d",
+    "from": "now-24h",
     "to": "now"
   },
   "timepicker": {
@@ -3772,6 +3906,6 @@
   "timezone": "utc",
   "title": "[ Umee ] Cluster [ GitHub ]",
   "uid": "wkPfAmL7k",
-  "version": 5,
+  "version": 12,
   "weekStart": ""
 }
