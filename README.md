@@ -1,7 +1,7 @@
 ### UMEE GRAFANA DASHBOARD
 
 * Grafana version: v8.3.3 [ upgrade ! ]
-* Requirement: node-exporter
+* Requirement: node-exporter _( otherwise hardware data will not be available )_
 * Enable prometheus metrics in $HOME/.umee/config/config.toml
 
 ```bash
