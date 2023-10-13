@@ -1,0 +1,27 @@
+[Unit]
+Description=Price Feeder Service
+After=network-online.target
+
+[Service]
+Type=simple
+
+Environment="PRICE_FEEDER_PASS=<my_password>"
+
+User=feeder
+Group=feeder
+
+ExecStart=/home/feeder/price-feeder/build/price-feeder /home/feeder/umee-provider-config/price-feeder.toml --log-level=debug --skip-provider-check
+
+WorkingDirectory=/home/feeder/price-feeder/build
+
+Restart=on-failure
+
+StartLimitIntervalSec=0
+StartLimitBurst=0
+
+RestartSec=12
+
+LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target

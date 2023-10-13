@@ -1,0 +1,311 @@
+[[currency_pairs]]
+base = "UMEE"
+providers = [
+  "okx",
+  "gate",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "UMEE"
+providers = [
+  "osmosis",
+]
+quote = "ATOM"
+
+[[currency_pairs]]
+base = "USDT"
+providers = [
+  "kraken",
+  "coinbase",
+  "crypto",
+]
+quote = "USD"
+
+[[currency_pairs]]
+base = "ATOM"
+providers = [
+  "okx",
+  "bitget",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "ATOM"
+providers = [
+  "kraken",
+  "crypto",
+]
+quote = "USD"
+
+[[currency_pairs]]
+base = "USDC"
+providers = [
+  "okx",
+  "bitget",
+  "kraken",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "DAI"
+providers = [
+  "okx",
+  "bitget",
+  "huobi",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "DAI"
+providers = [
+  "kraken",
+]
+quote = "USD"
+
+[[currency_pairs]]
+base = "ETH"
+providers = [
+  "okx",
+  "bitget",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "ETH"
+providers = [
+  "kraken",
+]
+quote = "USD"
+
+[[currency_pairs]]
+base = "WBTC"
+providers = [
+  "okx",
+  "bitget",
+  "crypto",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "CRO"
+providers = [
+  "crypto",
+  "bitget",
+  "okx",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "BNB"
+providers = [
+  "mexc",
+  "bitget",
+  "okx",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "OSMO"
+providers = [
+  "osmosis",
+]
+quote = "ATOM"
+
+[[currency_pairs]]
+base = "OSMO"
+providers = [
+  "bitget",
+  "gate",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "OSMO"
+providers = [
+  "crypto",
+]
+quote = "USD"
+
+[[currency_pairs]]
+base = "stATOM"
+providers = [
+  "osmosis",
+]
+quote = "ATOM"
+
+[[currency_pairs]]
+base = "stOSMO"
+providers = [
+  "osmosis",
+]
+quote = "OSMO"
+
+[[currency_pairs]]
+base = "IST"
+providers = [
+  "osmosis",
+]
+quote = "OSMO"
+
+[[currency_pairs]]
+base = "IST"
+providers = [
+  "crescent",
+]
+quote = "USDC"
+
+[[currency_pairs]]
+base = "USDC"
+providers = [
+  "kraken",
+]
+quote = "USD"
+
+[[currency_pairs]]
+base = "AKT"
+quote = "USDT"
+providers = [ "huobi", "gate",]
+
+[[currency_pairs]]
+base = "AKT"
+quote = "USD"
+providers = [ "kraken", "crypto",]
+
+[[currency_pairs]]
+base = "JUNO"
+quote = "USDT"
+providers = [ "bitget", "mexc",]
+
+[[currency_pairs]]
+base = "JUNO"
+quote = "USD"
+providers = [ "kraken",]
+
+[[currency_pairs]]
+base = "JUNO"
+quote = "ATOM"
+providers = [ "osmosis",]
+
+[[currency_pairs]]
+base = "LUNA"
+quote = "USDT"
+providers = [ "okx", "gate", "huobi", "bitget",]
+
+[[currency_pairs]]
+base = "WAXL"
+providers = [
+  "kraken",
+]
+quote = "USD"
+
+[[currency_pairs]]
+base = "WAXL"
+providers = [
+  "huobi",
+  "bitget",
+  "gate",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "DOT"
+providers = [
+  "kraken",
+  "coinbase",
+  "crypto",
+]
+quote = "USD"
+
+[[currency_pairs]]
+base = "DOT"
+providers = [
+  "gate",
+  "bitget",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "MATIC"
+providers = [
+  "coinbase",
+  "kraken",
+]
+quote = "USD"
+
+[[currency_pairs]]
+base = "MATIC"
+providers = [
+  "gate",
+  "mexc",
+  "bitget",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "stkATOM"
+providers = [
+  "osmosis",
+]
+quote = "ATOM"
+
+[[currency_pairs]]
+base = "qATOM"
+providers = [
+  "osmosis",
+]
+quote = "ATOM"
+
+[[currency_pairs]]
+base = "CBETH"
+quote = "USD"
+providers = [ "coinbase",]
+
+[[currency_pairs]]
+base = "CMST"
+providers = [
+  "osmosis",
+]
+quote = "OSMO"
+
+[[currency_pairs]]
+base = "MARS"
+providers = [
+  "osmosis",
+]
+quote = "OSMO"
+
+[[currency_pairs]]
+base = "stJUNO"
+providers = [
+  "osmosis",
+]
+quote = "JUNO"
+
+[[currency_pairs]]
+base = "USK"
+providers = [
+  "kujira",
+]
+quote = "USDC"
+
+[[currency_pairs]]
+base = "NCT"
+providers = [
+  "osmosis",
+]
+quote = "OSMO"
+
+[[currency_pairs]]
+base = "SOMM"
+providers = [
+  "osmosis",
+]
+quote = "OSMO"
+
+[[currency_pairs]]
+base = "SOMM"
+providers = [
+  "gate",
+]
+quote = "USDT"

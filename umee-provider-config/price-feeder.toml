@@ -1,0 +1,34 @@
+config_dir = "/home/feeder/umee-provider-config"
+
+gas_adjustment = 1.03
+provider_timeout = "1000000s"
+
+[server]
+listen_addr = "0.0.0.0:7171"
+read_timeout = "20s"
+verbose_cors = true
+write_timeout = "20s"
+
+[account]
+address = "umee1..."
+chain_id = "umee-1"
+validator = "umeevaloper1..."
+
+[keyring]
+backend = "os"
+dir = "/home/feeder/.umee/"
+pass = "my_password"
+
+[rpc]
+grpc_endpoint = "localhost:9090"
+rpc_timeout = "100ms"
+tmrpc_endpoint = "http://localhost:26657"
+
+[telemetry]
+enable-hostname = false
+enable-hostname-label = false
+enable-service-label = true
+enabled = true
+global-labels = [["chain_id", "umee-1"]]
+service-name = "feeder_1"
+prometheus-retention-time = 100
