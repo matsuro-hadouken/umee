@@ -10,6 +10,7 @@ Current configuration assume we are running feeder from $USER name `feeder` and 
 ```
 Systemd config need to be adjusted accordingly:
 ```
+Environment="PRICE_FEEDER_PASS=<my_password>"
 ExecStart=/home/feeder/price-feeder/build/price-feeder /home/feeder/umee-provider-config/price-feeder.toml ...
 ```
 For `price-feeder.toml`
