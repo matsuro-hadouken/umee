@@ -2,6 +2,40 @@
 ```toml
 This config only valid at this particular moment in time ^^
 ```
+
+Contain 28 assets:
+
+* AKT
+* ATOM
+* BNB
+* CBETH
+* CMST
+* CRO
+* DAI
+* DOT
+* ETH
+* IST
+* JUNO
+* LUNA
+* MARS
+* MATIC
+* NCT
+* OSMO
+* SOMM
+* UMEE
+* USDC
+* USDT
+* USK
+* WAXL
+* WBTC
+* qATOM
+* stATOM
+* stJUNO
+* stOSMO
+* stkATOM
+
+### Systemd
+
 For the record `price-feeder.service` additionally provided.
 
 Current configuration assume we are running feeder from $USER name `feeder` and absolute path to config folder is:
@@ -11,7 +45,11 @@ Current configuration assume we are running feeder from $USER name `feeder` and 
 Systemd config need to be adjusted accordingly:
 ```
 Environment="PRICE_FEEDER_PASS=<my_password>"
-ExecStart=/home/feeder/price-feeder/build/price-feeder /home/feeder/umee-provider-config/price-feeder.toml ...
+
+User=feeder
+Group=feeder
+
+ExecStart=/path/to/price-feeder /home/feeder/umee-provider-config/price-feeder.toml ...
 ```
 For `price-feeder.toml`
 * set `config_dir = "/home/feeder/umee-provider-config"`
@@ -28,7 +66,7 @@ backend = "os"
 dir = "/home/feeder/.umee/"
 pass = "my_password"
 ```
-* adjust telemtetry ...
+* adjust telemetry ...
 ```toml
 [telemetry]
 ```
